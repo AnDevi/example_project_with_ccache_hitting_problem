@@ -1,0 +1,84 @@
+[2022-08-05T11:20:06.090975 156  ] === CCACHE 4.6.1 STARTED =========================================
+[2022-08-05T11:20:06.090975 156  ] Config: (default) absolute_paths_in_stderr = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) base_dir = 
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) cache_dir = /ccache
+[2022-08-05T11:20:06.090975 156  ] Config: (default) compiler = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) compiler_check = mtime
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) compiler_type = clang
+[2022-08-05T11:20:06.090975 156  ] Config: (default) compression = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) compression_level = 0
+[2022-08-05T11:20:06.090975 156  ] Config: (default) cpp_extension = 
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) debug = true
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) debug_dir = /ccache/debug
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) depend_mode = true
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) direct_mode = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) disable = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) extra_files_to_hash = 
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) file_clone = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) hard_link = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) hash_dir = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) ignore_headers_in_manifest = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) ignore_options = 
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) inode_cache = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) keep_comments_cpp = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) limit_multiple = 0.8
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) log_file = /ccache/ccache-log
+[2022-08-05T11:20:06.090975 156  ] Config: (default) max_files = 0
+[2022-08-05T11:20:06.090975 156  ] Config: (/ccache/config) max_size = 20.0G
+[2022-08-05T11:20:06.090975 156  ] Config: (default) namespace = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) path = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) pch_external_checksum = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) prefix_command = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) prefix_command_cpp = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) read_only = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) read_only_direct = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) recache = false
+[2022-08-05T11:20:06.090975 156  ] Config: (default) reshare = false
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) run_second_cpp = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) secondary_storage = 
+[2022-08-05T11:20:06.090975 156  ] Config: (environment) sloppiness = clang_index_store, include_file_ctime, include_file_mtime, ivfsoverlay, locale, modules, pch_defines, system_headers, time_macros
+[2022-08-05T11:20:06.090975 156  ] Config: (default) stats = true
+[2022-08-05T11:20:06.090975 156  ] Config: (default) stats_log = 
+[2022-08-05T11:20:06.090975 156  ] Config: (default) temporary_dir = /ccache/tmp
+[2022-08-05T11:20:06.090975 156  ] Config: (default) umask = 
+[2022-08-05T11:20:06.091039 156  ] Command line: /usr/local/bin/ccache /usr/bin/clang++ -g -O0 -Wall -Wextra -target x86_64-pc-linux-gnu -pipe -fexceptions -fvisibility=default -x c++-header -Wno-error -fPIC -I/build/include -std=c++17 -stdlib=libc++ -o /build/debug/project.98f54143/project_cpp.gch -c /build/precompile.pch.h
+[2022-08-05T11:20:06.091050 156  ] Hostname: 2fe3778b1710
+[2022-08-05T11:20:06.091052 156  ] Working directory: /build
+[2022-08-05T11:20:06.091055 156  ] Compiler type: clang
+[2022-08-05T11:20:06.091113 156  ] Disabling depend mode
+[2022-08-05T11:20:06.091117 156  ] Source file: /build/precompile.pch.h
+[2022-08-05T11:20:06.091120 156  ] Object file: /build/debug/project.98f54143/project_cpp.gch
+[2022-08-05T11:20:06.091230 156  ] Hashing CWD /build
+[2022-08-05T11:20:06.091246 156  ] Trying direct lookup
+[2022-08-05T11:20:06.091278 156  ] inode cache file loaded: /ccache/tmp/inode-cache.v1
+[2022-08-05T11:20:06.091296 156  ] inode cache hit: /build/precompile.pch.h
+[2022-08-05T11:20:06.091300 156  ] Accumulated stats for inode cache: hits=9, misses=6, errors=0
+[2022-08-05T11:20:06.091309 156  ] Retrieved 2711ik1dau6n3ie06vsmiqdkbf3huau9c from primary storage (/ccache/2/7/11ik1dau6n3ie06vsmiqdkbf3huau9cM)
+[2022-08-05T11:20:06.091316 156  ] Looking for result key in /ccache/2/7/11ik1dau6n3ie06vsmiqdkbf3huau9cM
+[2022-08-05T11:20:06.091363 156  ] Precompiled header includes /build/common/common.hpp, which has a new mtime
+[2022-08-05T11:20:06.091367 156  ] Did not find result key in manifest
+[2022-08-05T11:20:06.091441 156  ] Running preprocessor
+[2022-08-05T11:20:06.091446 156  ] Executing /usr/bin/clang++ -g -O0 -Wall -Wextra -target x86_64-pc-linux-gnu -pipe -fexceptions -fvisibility=default -fPIC -std=c++17 -I/build/include -stdlib=libc++ -x c++-header -E /build/precompile.pch.h
+[2022-08-05T11:20:06.163067 156  ] inode cache miss: /build/common/common.hpp
+[2022-08-05T11:20:06.163080 156  ] Accumulated stats for inode cache: hits=9, misses=7, errors=0
+[2022-08-05T11:20:06.163095 156  ] inode cache insert: /build/common/common.hpp
+[2022-08-05T11:20:06.203917 156  ] Got result key from preprocessor
+[2022-08-05T11:20:06.203924 156  ] Not considering cached precompiled header in preprocessor mode
+[2022-08-05T11:20:06.203929 156  ] Running real compiler
+[2022-08-05T11:20:06.203981 156  ] Executing /usr/bin/clang++ -g -O0 -Wall -Wextra -target x86_64-pc-linux-gnu -pipe -fexceptions -fvisibility=default -fPIC -std=c++17 -Wno-error -I/build/include -stdlib=libc++ -x c++-header -c -fcolor-diagnostics -o /build/debug/project.98f54143/project_cpp.gch /build/precompile.pch.h
+[2022-08-05T11:20:06.706850 156  ] Using default compression level 1
+[2022-08-05T11:20:06.706908 156  ] Storing raw entry #0 .o (7957268 bytes) from /build/debug/project.98f54143/project_cpp.gch
+[2022-08-05T11:20:06.706914 156  ] Cloning /build/debug/project.98f54143/project_cpp.gch to /ccache/4/a/79qspij6i0m89qr1ont22kkq4tjjm0q0W
+[2022-08-05T11:20:06.706994 156  ] Failed to clone: Invalid cross-device link
+[2022-08-05T11:20:06.707002 156  ] Copying /build/debug/project.98f54143/project_cpp.gch to /ccache/4/a/79qspij6i0m89qr1ont22kkq4tjjm0q0W
+[2022-08-05T11:20:06.724422 156  ] Stored 4a79qspij6i0m89qr1ont22kkq4tjjm0q in primary storage (/ccache/4/a/79qspij6i0m89qr1ont22kkq4tjjm0qR)
+[2022-08-05T11:20:06.724441 156  ] Adding result key to /ccache/2/7/11ik1dau6n3ie06vsmiqdkbf3huau9cM
+[2022-08-05T11:20:06.724496 156  ] Using default compression level 1
+[2022-08-05T11:20:06.733351 156  ] Stored 2711ik1dau6n3ie06vsmiqdkbf3huau9c in primary storage (/ccache/2/7/11ik1dau6n3ie06vsmiqdkbf3huau9cM)
+[2022-08-05T11:20:06.733367 156  ] Result: cache_miss
+[2022-08-05T11:20:06.733370 156  ] Result: direct_cache_miss
+[2022-08-05T11:20:06.733373 156  ] Result: preprocessed_cache_miss
+[2022-08-05T11:20:06.733375 156  ] Result: primary_storage_hit
+[2022-08-05T11:20:06.733409 156  ] Acquired lock /ccache/4/a/stats.lock
+[2022-08-05T11:20:06.733479 156  ] Releasing lock /ccache/4/a/stats.lock
+[2022-08-05T11:20:06.733491 156  ] Unlink /ccache/4/a/stats.lock

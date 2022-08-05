@@ -1,0 +1,54 @@
+=== COMMON ===
+4
+### ext
+ii
+### cc_mtime
+132776
+1635545896
+### cc_name
+clang++
+### cwd
+/build/out/project
+=== DIRECT MODE ===
+### result version
+1
+### manifest version
+0
+### arg
+-g
+### arg
+-O0
+### arg
+-Wall
+### arg
+-Wextra
+### arg
+-target
+### arg
+x86_64-pc-linux-gnu
+### arg
+-pipe
+### arg
+-fexceptions
+### arg
+-fvisibility=default
+### arg
+-fPIC
+### arg
+-std=c++17
+### arg
+-include
+### arg
+/build/out/project/debug/project.98f54143/project_cpp
+### arg
+-I/build/out/project/include
+### arg
+-stdlib=libc++
+### arg
+-fpch-preprocess
+### arg
+-Wno-error
+### inputfile
+/build/out/project/source/main.cpp
+### sourcecode
+901a55df871d34d5abe909fe3fa285c7ce8ad7f5

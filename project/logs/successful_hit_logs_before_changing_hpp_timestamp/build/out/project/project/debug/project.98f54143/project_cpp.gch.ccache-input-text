@@ -1,0 +1,52 @@
+=== COMMON ===
+4
+### ext
+ii
+### cc_mtime
+132776
+1635545896
+### cc_name
+clang++
+### cwd
+/build/out/project/project
+=== DIRECT MODE ===
+### result version
+1
+### manifest version
+0
+### arg
+-g
+### arg
+-O0
+### arg
+-Wall
+### arg
+-Wextra
+### arg
+-target
+### arg
+x86_64-pc-linux-gnu
+### arg
+-pipe
+### arg
+-fexceptions
+### arg
+-fvisibility=default
+### arg
+-fPIC
+### arg
+-std=c++17
+### arg
+-I/build/out/project/project/include
+### arg
+-stdlib=libc++
+### arg
+-x
+### arg
+c++-header
+### arg
+-Wno-error
+### inputfile
+/build/out/project/project/precompile.pch.h
+### sourcecode
+4aef63997965da5a25514b2311f0f9034a041dbb
