@@ -17,7 +17,6 @@ Ccache settings:
 run_second_cpp=true
 depend_mode=true
 direct_mode=true
-# Faster file copying (cloning).
 file_clone=true
 inode_cache=true
 sloppiness=ivfsoverlay,modules,include_file_mtime,include_file_ctime,time_macros,pch_defines,clang_index_store,system_headers,locale
