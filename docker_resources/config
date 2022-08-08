@@ -1,0 +1,18 @@
+max_size = 20G
+cache_dir =/ccache
+
+# Modules requires both direct and depend mode.
+run_second_cpp=true
+depend_mode=true
+direct_mode=true
+# Faster file copying (cloning).
+file_clone=true
+inode_cache=true
+
+# Accept more file changes before recompiling.
+sloppiness=ivfsoverlay,modules,include_file_mtime,include_file_ctime,time_macros,pch_defines,clang_index_store,system_headers,locale
+compiler_type="clang"
+
+debug=true
+debug_dir=/ccache/debug
+log_file=/ccache/ccache-log

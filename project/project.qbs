@@ -1,8 +1,11 @@
 import qbs
+import qbs.File
 
 CppApplication {
     name: "project"
     consoleApplication: true
+
+    property bool isCcacheEnabled : File.exists("/usr/local/bin/ccache")
 
     Depends { name: 'cpp' }
     
@@ -11,12 +14,14 @@ CppApplication {
         cpp.cxxLanguageVersion: "c++17"
         cpp.cxxStandardLibrary: "libc++"
 
+        cpp.compilerWrapper: isCcacheEnabled ? ["ccache"] : original
+        cpp.useCxxPrecompiledHeader : isCcacheEnabled ? false : original
+        cpp.prefixHeaders : isCcacheEnabled ? ["precompile.pch.h"] : original
+
         cpp.commonCompilerFlags: {
-            /// INFO: Start with base warnings settings
             var flags = [
                 "-Wno-error",
             ]
-
             const GLOBAL_FLAGS = project.GLOBAL_FLAGS;
 
             if (GLOBAL_FLAGS) {

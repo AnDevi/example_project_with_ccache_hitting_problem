@@ -11,6 +11,18 @@ In paths below there are logs presenting my problem, generated before and after 
 
 ## How to reproduce this issue by yourself:
 
+Ccache settings:
+
+```
+run_second_cpp=true
+depend_mode=true
+direct_mode=true
+# Faster file copying (cloning).
+file_clone=true
+inode_cache=true
+sloppiness=ivfsoverlay,modules,include_file_mtime,include_file_ctime,time_macros,pch_defines,clang_index_store,system_headers,locale
+```
+
 ### Optional environment to build and reproduce this issue:
 
 I prepared Dockerfile with `clang` and `qbs` to reproduce it.
@@ -54,7 +66,6 @@ Primary storage:
 2) Delete previous build and build it again:
 
 ```sh
-rm -r debug
 ./qbs_install.sh
 ```
 Now we have hits, `ccache -s` output:
@@ -76,7 +87,6 @@ Primary storage:
 
 ```sh
 touch common/common.hpp
-rm -r debug
 ./qbs_install.sh
 ```
 Now again we have no hits, `ccache -s` output:

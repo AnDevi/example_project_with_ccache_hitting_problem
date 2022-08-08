@@ -28,33 +28,14 @@ RUN qbs setup-toolchains --detect --system \
     && qbs config --system profiles.custom_clang.cpp.compilerName clang++ \
     && qbs config --system profiles.custom_clang.cpp.cxxCompilerName clang++ \
     && qbs config --system profiles.custom_clang.cpp.toolchainInstallPath /usr/bin \
-    && qbs config --system profiles.custom_clang.cpp.compilerWrapper ccache \
     && qbs config --system profiles.custom_clang.qbs.toolchainType clang
 
 # Configure ccache
 COPY docker_resources/ccache /usr/local/bin/
-
-ENV CCACHE_DIR /ccache
 ENV CCACHE_CONFIGPATH /ccache/config
 
-# Modules requires both direct and depend mode.
-ENV CCACHE_CPP2=true
-ENV CCACHE_DEPEND=true
-ENV CCACHE_DIRECT=true
-# Faster file copying (cloning).
-ENV CCACHE_FILECLONE=true
-ENV CCACHE_INODECACHE=true
-
-# Accept more file changes before recompiling.
-ENV CCACHE_SLOPPINESS=ivfsoverlay,modules,include_file_mtime,include_file_ctime,time_macros,pch_defines,clang_index_store,system_headers,locale
-ENV CCACHE_COMPILERTYPE="clang"
-
-ENV CCACHE_DEBUG=true
-ENV CCACHE_DEBUGDIR=/ccache/debug
-ENV CCACHE_LOGFILE=/ccache/ccache-log
-
-RUN ccache --max-size 20G
-
+RUN mkdir -p /ccache
+COPY docker_resources/config /ccache/config
 RUN chown -R ${USER_NAME} /build
 RUN chown -R ${USER_NAME} /ccache
 
