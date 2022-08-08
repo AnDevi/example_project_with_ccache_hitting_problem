@@ -7,6 +7,9 @@ CppApplication {
 
     property bool isCcacheEnabled : File.exists("/usr/local/bin/ccache")
 
+    // This is solution for ccache's problem with newly genereated 'gch' files. 
+    property bool useWorkaround: false
+
     Depends { name: 'cpp' }
     
     Properties {
@@ -15,8 +18,8 @@ CppApplication {
         cpp.cxxStandardLibrary: "libc++"
 
         cpp.compilerWrapper: isCcacheEnabled ? ["ccache"] : original
-        cpp.useCxxPrecompiledHeader : isCcacheEnabled ? false : original
-        cpp.prefixHeaders : isCcacheEnabled ? ["precompile.pch.h"] : original
+        cpp.useCxxPrecompiledHeader : useWorkaround ? false : original
+        cpp.prefixHeaders : useWorkaround ? ["precompile.pch.h"] : original
 
         cpp.commonCompilerFlags: {
             var flags = [
@@ -28,7 +31,7 @@ CppApplication {
                 flags = flags.concat(GLOBAL_FLAGS);
             }
 
-            return flags;
+            return flags;useWorkaround
         }
 
         cpp.separateDebugInformation: false

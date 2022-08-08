@@ -105,5 +105,6 @@ Primary storage:
 ``` 
 Above are logs from that scenario which leads to undesirable cache misses. 
 
+## Workaround solution:
 
-
+In [project.qbs](project/project.qbs) change value `useWorkaround` to `true` to use `pch` files as prefix headers and just include them instead of using them as precompile headers.
